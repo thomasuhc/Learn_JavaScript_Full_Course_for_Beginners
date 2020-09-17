@@ -71,3 +71,132 @@ var fullAge = 19;
 var isFullAge = now - yearAngela >= fullAge;
 console.log(isFullAge);
 
+var ageAngela = now - yearAngela;
+var angela = 35;
+var average = (ageAngela + angela) / 2;
+console.log(average);
+
+var x, y;
+x = y = (3 + 5) * 4 - 6;
+console.log(x,y);
+
+x *= 2;
+console.log(x);
+x += 10;
+console.log(x);
+x = x + 1;
+x += 1;
+x++;
+console.log(x);
+
+/*************************************/
+
+var firsName = 'Manolo';
+var civilStatus = 'single';
+
+if (civilStatus === 'married') {
+    console.log(firsName + 'is married');
+} else {
+    console.log(firsName + 'will hopefully marry soon :');
+}
+
+var isMarried = true;
+if (isMarried) {
+    console.log(firsName + 'is married');
+} else {
+    console.log(firsName + 'will hopefully marry soon :');
+}
+
+
+/*************************************/
+
+var firstName = 'Angela';
+var age = 20;
+
+if (age < 18) {
+    console.log(firsName + 'is a girl');
+
+} else if (age >= 15 && age < 20) {
+    console.log(firsName + 'is a teenager');
+
+} else if (age >= 20 && age < 30) {
+    console.log(firsName + 'is a young girl');
+}
+else {
+    console.log(firsName + 'is a woman');
+}
+
+age = 20;
+switch (true) {
+    case 'age < 18':
+        console.log(firsName + 'is a girl');
+        break;
+    case 'age >= 15 && age < 20':
+        console.log(firsName + 'is a teenager');
+        break;
+    case 'age >= 20 && age < 30':
+        console.log(firsName + 'is a young girl');
+        break;
+
+        default:
+        console.log(firsName + 'is a woman');
+
+}
+
+/*************************************/
+
+var firstName = 'Angela';
+var age = 18;
+
+age >= 20 ? console.log(firsName + ' drink beer.') : console.log( firsName + 'drink Juice');
+
+var drink = age >= 20 ? 'beer' : 'Juice';
+console.log(drink);
+
+if (age >= 20) {
+    var drink = 'beer';
+} else {
+    var drink ='Juice';
+}
+
+/*************************************/
+
+var job = 'Dev';
+
+switch (job) {
+    case 'Dev':
+        console.log(firsName + ' dev is design');
+        break;
+ 
+        case 'Driver':
+        console.log(firsName + ' driver in canada');
+        break;
+    case 'Design':
+        console.log(firsName + ' design web');
+        break;
+
+        default:
+        console.log(firsName + ' hahahahahahaha');
+
+}
+
+/*************************************/
+
+var height;
+
+height = 1.70;
+
+if (height || height === 0) {
+    console.log('variable is defined');
+
+} else {
+    console.log('variable is not been defined');
+}
+
+if (height == 1.70) {
+    console.log('The == operator does type coercion!');
+}
+
+if (height === '1.70') {
+    console.log('The == operator does type coercion!');
+}
