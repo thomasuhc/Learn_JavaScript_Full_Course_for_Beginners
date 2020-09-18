@@ -200,3 +200,117 @@ if (height == 1.70) {
 if (height === '1.70') {
     console.log('The == operator does type coercion!');
 }
+
+
+/*************************************/
+
+function calculateAge (birtheYear) {
+
+    return 2020 - birtheYear;
+
+}
+
+var ageAngela = calculateAge(1998);
+console.log(ageAngela);
+
+calculateAge(1990);
+
+var ageAna = calculateAge(1991);
+var ageCamila = calculateAge(1998);
+var ageMila = calculateAge(2002);
+
+console.log(ageAna, ageCamila, ageMila);
+
+
+function yearUntilRetirement (year, firtName) {
+    
+    var age = calculateAge(year);
+    var retirement = 50 - arguments;
+
+    if ( retirement > 0 ) {
+
+        console.log(firsName + ' retires in ' + retirement + ' years');
+
+    } else {
+
+        console.log(firsName + ' retires in ' + retirement + ' years');
+    }
+}
+
+yearUntilRetirement(2001, 'Angela');
+yearUntilRetirement(1995, 'Ana');
+yearUntilRetirement(1991, 'Mila');
+
+
+/*************************************/
+
+
+function whatDoYouDo (job, firtName) {
+
+}
+
+
+var whatDoYouDo = function (job, firtName) {
+
+    switch (job) {
+
+        case 'Design':
+
+            return firsName + 'Design things';
+
+            case 'Dev':
+
+                return firsName + 'Dev program';
+
+                case 'Code':
+
+                        return firsName + 'Code somenthing';
+
+            default:
+                return firsName + 'all things'
+    }
+}
+
+console.log(whatDoYouDo('Design' , 'Angela'));
+console.log(whatDoYouDo('Dev' , 'Ana'));
+console.log(whatDoYouDo('Code' , 'Mila'));
+
+
+/*************************************/
+
+var names = ['Angela' , 'Ana' , 'Mila'];
+var years = new Array(1998, 2000, 2001);
+
+console.log(names[0])
+
+console.log(names);
+console.log(names.length);
+
+names[1] = 'Aline';
+names[4] = 'Marry';
+
+names[names.length] = 'Julia';
+
+console.log(names);
+
+
+var Aline = ['Aline' , 'teacher' , '2000' , false];
+
+Aline.push('Red');
+Aline.unshift('Mrs');
+console.log(Aline);
+
+Aline.pop();
+Aline.pop();
+Aline.shift();
+console.log(Aline)
+
+console.log(Aline.indexOf(2000));
+
+var isDev = Aline.indexOf('Dev') ===1 ? 'Aline is not a Dev' : 'Angela is dev';
+
+console.log(isDev);
+
+/*************************************/
+
+
