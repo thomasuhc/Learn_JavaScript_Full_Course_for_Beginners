@@ -313,4 +313,90 @@ console.log(isDev);
 
 /*************************************/
 
+var yo = {
+    firtName:'Angel',
+    lastName: "li",
+    birthYear: 2000,
+    family: ['Maia', 'Ana', 'Angela', 'Emily'],
+    job: 'Dev',
+    isMarried : false
+};
+console.log(yo);
+console.log(yo.firsName);
+console.log(yo['lastName']);
 
+var x = 'birthYear'
+console.log(yo[x]);
+
+yo.job = 'Cleaner';
+yo['IsMarried'] = true;
+console.log(yo);
+
+var jane = new object();
+jane.name = 'Jane';
+jane.birthYear = 2001;
+jane['lastName'] = 'Li';
+console.log(jane);
+
+/*************************************/
+
+var li = {
+    firtName:'Angel',
+    lastName: "li",
+    birthYear: 2000,
+    family: ['Maia', 'Ana', 'Angela', 'Emily'],
+    job: 'Dev',
+    isMarried : false,
+    calcAge: function() {
+        this.age = 2020 - this.birthYear;
+    }
+};
+
+console.log(li.calcAge(1990));
+
+li.age = li.calcAge();
+console.log(li);
+
+/*************************************/
+
+for (var i = 0; i < 10; i++) {
+    console.log(i);
+} 
+
+for (var i = 1; i < 20; i += 2) {
+    console.log(i);
+} 
+
+var vivian = ['Lucia', 'Ana', 'Clara', 'Aline', false, 'Pink'];
+console.log(vivian);
+
+for (var i = 0; i < vivian.length; i++) {
+
+    console.logO(vivian[i]);
+
+}
+
+while ( i < vivian.length ) {
+
+    if ( typeof vivian[i] !== 'String') {
+        continue;
+    } 
+    console.logO(vivian[i]);
+    i++;
+}
+
+while ( i < vivian.length ) {
+
+    if ( typeof vivian[i] !== 'String') {
+        break;
+    } 
+    console.logO(vivian[i]);
+    i++;
+}
+
+
+for (var i = vivian.length - 1; i >= 0; i--) {
+
+    console.logO(vivian[i]);
+
+}
