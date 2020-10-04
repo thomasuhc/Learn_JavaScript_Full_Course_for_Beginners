@@ -50,7 +50,7 @@ console.log(camila.lastName);
  });
   */
 
-  var a = 23;
+/*   var a = 23;
   var b = a;
   a = 46;
   console.log(a);
@@ -82,3 +82,45 @@ var age = 15;
   
   console.log(age);
   console.log(obj.city);
+ */
+
+ var years = [1990, 2000, 2010, 2015, 2020];
+
+ function arrayCalc (arr, fn) {
+
+    var arrRes = [];
+
+    for(var i = 0; i < arr.length; i++) {
+
+        arrRes.push(fn(arr[i]));
+    }
+     return arrRes;
+ }
+
+ function calculateAge(el){
+     return 2020 - el;
+ }
+
+ function fullAge(el) {
+     return el >= 18;
+ }
+
+ function maxHeartRate(el){
+
+    if(el >= 18 && el <= 81) {
+        return Math.round(265.9 - (0.76 * el));
+    } else {
+        return -1;
+    }
+    
+ }
+
+ var ages = arrayCalc(years, calculateAge);
+
+ var fullAge = arrayCalc(ages, fullAge);
+
+ var rates = arrayCalc(ages, maxHeartRate);
+
+ console.log(ages);
+ console.log(fullAge);
+ console.log(rates);
