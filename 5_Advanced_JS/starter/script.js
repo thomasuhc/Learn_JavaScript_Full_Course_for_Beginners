@@ -1,4 +1,4 @@
-var miau = {
+/* var miau = {
     name: "Miau",
     yearOfBirth: 1999,
     job: "Dev"
@@ -29,3 +29,23 @@ camila.calculateAge();
 console.log(miau.lastName);
 console.log(angela.lastName);
 console.log(camila.lastName);
+ */
+
+ var personProto = {
+     calculateAge: function() {
+         console.log(2020 - this.yearOfBirth);
+     }
+ };
+
+ var miau = Object.create(personProto);
+ miau.name = "Miau";
+ miau.yearOfBirth =1999;
+ miau.job = "Cat";
+
+ var camila = Object.create(personProto, {
+     
+    name: { value: "Camila" },
+    yearOfBirth: { value: 1999 },
+    job: { value: "Cat" }
+ });
+ 
