@@ -84,7 +84,7 @@ var age = 15;
   console.log(obj.city);
  */
 
- var years = [1990, 2000, 2010, 2015, 2020];
+/* var years = [1990, 2000, 2010, 2015, 2020];
 
  function arrayCalc (arr, fn) {
 
@@ -124,3 +124,31 @@ var age = 15;
  console.log(ages);
  console.log(fullAge);
  console.log(rates);
+ */
+
+function interviewQuestion (job) {
+    
+    if(job === "dev") {
+        return function (name) {
+            console.log(name + ", can explain something funny");
+            }
+        } else if (job === "teacher") {
+            return function (name) {
+                console.log("Subject are teacher ?: " + name);
+            }
+        } else {
+            return function (name) {
+                console.log("Hello " + name + " hi dude");
+            }
+        }
+    
+ }
+
+ var teacherQuestion = interviewQuestion("teacher");
+
+ var designQuestion = interviewQuestion("dev")
+
+ teacherQuestion("Miau");
+ designQuestion("Mila");
+
+ interviewQuestion("Camila")("student");
