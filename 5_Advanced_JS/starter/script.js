@@ -126,7 +126,7 @@ var age = 15;
  console.log(rates);
  */
 
-function interviewQuestion (job) {
+/* function interviewQuestion (job) {
     
     if(job === "dev") {
         return function (name) {
@@ -151,4 +151,26 @@ function interviewQuestion (job) {
  teacherQuestion("Miau");
  designQuestion("Mila");
 
- interviewQuestion("Camila")("student");
+ interviewQuestion("Camila")("student"); */
+
+
+ function game(){
+     var score = Math.random() * 10;
+     console.log(score >= 5);
+ }
+
+ game();
+
+ 
+ (function game(){
+    var score = Math.random() * 10;
+    console.log(score >= 5);
+})();
+
+
+(function game(goodLuck){
+    var score = Math.random() * 10;
+    console.log(score >= 5 - goodLuck);
+})(5);
+
+
