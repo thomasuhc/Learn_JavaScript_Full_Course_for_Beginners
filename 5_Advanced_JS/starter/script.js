@@ -31,7 +31,7 @@ console.log(angela.lastName);
 console.log(camila.lastName);
  */
 
- var personProto = {
+/*  var personProto = {
      calculateAge: function() {
          console.log(2020 - this.yearOfBirth);
      }
@@ -48,4 +48,37 @@ console.log(camila.lastName);
     yearOfBirth: { value: 1999 },
     job: { value: "Cat" }
  });
- 
+  */
+
+  var a = 23;
+  var b = a;
+  a = 46;
+  console.log(a);
+  console.log(b);
+
+  var obj1 = {
+      name: "miau",
+      age: 12
+  };
+
+  var obj2 = obj1;
+  obj1.age = 38;
+  console.log(obj1.age);
+  console.log(obj2.age);
+
+
+var age = 15;
+ var obj = {
+      name: "Angela",
+      city: "Toronto"
+  };
+
+  function change(a, b) {
+      age = 10;
+      b.city = "Montreal";
+  }
+
+  change(age, obj);
+  
+  console.log(age);
+  console.log(obj.city);
