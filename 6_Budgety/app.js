@@ -41,28 +41,37 @@ var UIController = (function(){
 
 var controller = (function(budgetCtrl, UICtrl){
 
-    var DOM = UICtrl.getDOMStrings();
+    var setupEventListerners = function(){
+
+        var DOM = UICtrl.getDOMStrings();
+
+        document.querySelector(DOM.inputBtn).addEventListener("click", ctrlAddItem);
+
+        document.addEventListener("keypress", function(event){
+    
+        if(event.keycode === 13 || event.button === 13) {
+            ctrlAddItem();
+        };
+    
+    });
+
+    }
+
+   
 
     var ctrlAddItem = function() {
 
         var input = UICtrl.getinput();
-        console.log(input);
-
-
-    }
-
-    document.querySelector(DOM.inputBtn).addEventListener("click", ctrlAddItem);
-
-    document.addEventListener("keypress", function(event){
-
-    if(event.keycode === 13 || event.button === 13) {
-        ctrlAddItem();
     };
 
-});
+    return{
+        init: function(){
+            console.log("App start");
+            setupEventListerners();
+        }
+    }
 
 
 })(budgetController, UIController);
 
-
-   
+controller.init();
