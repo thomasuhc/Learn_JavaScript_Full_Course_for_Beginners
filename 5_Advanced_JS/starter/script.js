@@ -212,4 +212,36 @@ function interviewQuestion (job) {
  interviewQuestion("Dev")("Miau"); */
 
 
- 
+
+
+/*  var miau = {
+    name: "Miau",
+    age: 8,
+    job: "cat",
+    presentation: function(style, timeOfDay) {
+        if(style === "formal") {
+            console.log("Hi people !!!" + timeOfDay);
+        } else if (style === "friendly") {
+            console.log("Hey, cat nice day" + timeOfDay);
+        }
+    }
+ }
+
+ var mila = {
+    name: "Mila",
+    age: 12,
+    job: "Student",
+ };
+
+ miau.presentation("formal", "night");
+
+ miau.presentation.call(mila, "friendly", "afternoon");
+
+var miauFriend = miau.presentation.bind(miau, "friendly");
+
+miauFriend("morning");
+miauFriend("night");
+
+var milaFormal = miau.presentation.bind(mila, "formal");
+
+milaFormal("Afternoon"); */
