@@ -154,7 +154,7 @@ var age = 15;
  interviewQuestion("Camila")("student"); */
 
 
- function game(){
+/*  function game(){
      var score = Math.random() * 10;
      console.log(score >= 5);
  }
@@ -171,6 +171,45 @@ var age = 15;
 (function game(goodLuck){
     var score = Math.random() * 10;
     console.log(score >= 5 - goodLuck);
-})(5);
+})(5); */
 
 
+
+/* function retirement(retirementAge) {
+
+    var a = " left until retirement"
+
+    return function(yearOfBirth) {
+        var age = 2020 - yearOfBirth;
+        console.log((retirementAge - age) + a);
+    }
+}
+
+var retirementBR = retirement(65);
+
+retirementBR(1999);
+
+
+function interviewQuestion (job) {
+
+    return function(name) {
+
+        if(job === "dev") {
+       
+            console.log(name + ", can explain something funny");
+            
+        } else if (job === "teacher") {
+          
+            console.log("Subject are teacher ?: " + name);
+            
+        } else {
+
+            console.log("Hello " + name + " hi dude");
+            }
+    }
+}
+
+ interviewQuestion("Dev")("Miau"); */
+
+
+ 
