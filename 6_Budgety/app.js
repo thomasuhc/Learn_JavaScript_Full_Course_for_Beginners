@@ -173,7 +173,32 @@ var UIController = (function(){
         container: ".container",
         expensesPercLabel: ".item__percentage"
         
-    }
+    };
+
+    var formatNumber = function(num, type) {
+
+        var numSplit, int, dec;
+
+        num = Math.abs(num);
+
+        num = num.toFixed(2);
+
+        numSplit = num.split(".");
+
+        int = numSplit[0];
+
+        if(int.length > 3){
+
+           int = int.substr(0, 1) + "," + int.substr(int.length -3, 3);
+
+        }
+
+        dec = numSplit[1];
+        
+        return (type === "exp" ? sign = "-" : sign = "+") + "" + int + "." + dec;
+    
+    };
+
         return {
 
             getinput: function() {
@@ -210,7 +235,7 @@ var UIController = (function(){
 
                 newHtml = html.replace("%id%", obj.id);
                 newHtml = newHtml.replace("%description%", obj.description);
-                newHtml = newHtml.replace("%value%", obj.value);
+                newHtml = newHtml.replace("%value%", formatNumber(obj.value, type));
                 document.querySelector(element).insertAdjacentHTML("beforeend", newHtml);
             },
 
@@ -242,11 +267,15 @@ var UIController = (function(){
 
             displayBudget: function(obj) {
 
-                document.querySelector(DOMStrings.budgetLabel).textContent = obj.budget;
+                var type;
 
-                document.querySelector(DOMStrings.incomeLabel).textContent = obj.totalInc;
+                obj.budget > 0 ? type = "inc" : type = "exp";
 
-                document.querySelector(DOMStrings.expensesLabel).textContent = obj.totalExp;
+                document.querySelector(DOMStrings.budgetLabel).textContent = formatNumber(obj.budget, type);
+
+                document.querySelector(DOMStrings.incomeLabel).textContent = formatNumber(obj.totalInc, "inc");
+
+                document.querySelector(DOMStrings.expensesLabel).textContent = formatNumber(obj.totalExp, "exp");
 
                 document.querySelector(DOMStrings.percentageLabel).textContent = obj.percentage;
 
