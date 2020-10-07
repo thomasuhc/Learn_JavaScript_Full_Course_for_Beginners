@@ -121,8 +121,6 @@ var budgetController = (function(){
             } else {
                 data.percentage = -1;
             }
-
-          
         },
 
 
@@ -145,7 +143,7 @@ var budgetController = (function(){
 
         getBudget: function() {
             return {
-                Budget: data.budget,
+                budget: data.budget,
                 totalInc: data.totals.inc,
                 totalExp: data.totals.exp,
                 percentage: data.percentage
@@ -207,7 +205,6 @@ var UIController = (function(){
         }
     };
 
- 
 
         return {
 
@@ -403,7 +400,6 @@ var controller = (function(budgetCtrl, UICtrl){
 
     };
 
-  
 
     var ctrlAddItem = function() {
 
@@ -448,7 +444,6 @@ var controller = (function(budgetCtrl, UICtrl){
     }
 
 
-
     return{
         init: function(){
             console.log("App start");
@@ -456,7 +451,7 @@ var controller = (function(budgetCtrl, UICtrl){
             UICtrl.displayMonth();
 
             UICtrl.displayBudget({
-                Budget: 0,
+                budget: 0,
                 totalInc: 0,
                 totalExp: 0,
                 percentage: -1
