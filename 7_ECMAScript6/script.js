@@ -83,3 +83,24 @@ console.log(c);
 }
 
 console.log(c);
+
+// Strings in ES6
+
+
+let firstName = "Ana";
+let lastName = "Paula";
+const yearOfBirth = 2003;
+
+function calcAge(year) {
+
+    return 2020 - year;    
+}
+
+console.log(`${firstName} ${lastName}. ${yearOfBirth} ${calcAge(yearOfBirth)}`);
+
+
+const n = `${firstName} ${lastName}`;
+console.log(n.startsWith('A'));
+console.log(n.endsWith('a'));
+console.log(n.includes('na'));
+console.log(`${firstName} `.repeat(5));
