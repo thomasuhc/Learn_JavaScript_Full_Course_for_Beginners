@@ -58,3 +58,28 @@ for (let i = 0; i < 5; i++) {
 }
 
 console.log(i);
+
+
+// Blocks and IIFEs
+
+
+// ES5
+
+(function() {
+
+    var c = 3;
+    
+})
+
+console.log(c);
+
+
+// ES6
+
+{
+    const a = 1;
+    let b = 2;
+    var c = 4;
+}
+
+console.log(c);
