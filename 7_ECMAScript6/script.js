@@ -248,3 +248,41 @@ Person.prototype.myFriends6 = function(friends) {
 }
 
 new Person("Serena").myFriends6(friends);
+
+
+// Destructuring
+
+// ES5
+
+var miauu = ["Miau1", 12];
+var name1 = miauu[0];
+var age1 = miauu[1];
+
+// ES6
+
+const [name2, age2] = ["Miau3", 5];
+console.log(name2);
+console.log(age2);
+
+const obj = {
+    firstName3: "auau",
+    lastName3: "mia"
+}
+
+
+const {firstName3, lastName3} = obj;
+console.log(firstName3);
+console.log(lastName3);
+
+const {firstName3: a, lastName3: b} = obj;
+console.log(a);
+console.log(b);
+
+function calcAgeR(year) {
+    const ager = new Date().getFullYear() - year;
+    return[ager, 65 - ager];
+}
+
+const [ager, ret] = calcAgeR(2000);
+console.log(ager);
+console.log(ret);
