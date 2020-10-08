@@ -286,3 +286,78 @@ function calcAgeR(year) {
 const [ager, ret] = calcAgeR(2000);
 console.log(ager);
 console.log(ret);
+
+
+// Arrays in ES6
+
+const boxes = document.querySelectorAll(".box");
+
+// ES5
+
+var boxesArr5 = Array.prototype.slice.call(boxes);
+
+boxesArr5.forEach(function(cur) {
+
+    // cur.style.backgroundColor = "dodgerblue";
+    
+});
+
+// ES6
+
+/* const boxesArr6 = Array.from(boxes);
+boxesArr6.forEach(cur => cur.style.backgroundColor = "dodgerblue"); */
+
+
+const boxesArr6 = Array.from(boxes);
+Array.from(boxes).forEach(cur => cur.style.backgroundColor = "dodgerblue");
+
+///////////////////////////////
+
+// ES5
+
+for (var k = 0; k < boxesArr5.length; k++) {
+
+    if(boxesArr5[k].className === "box blue") {
+
+        //continue;
+        break;
+
+    }
+     //boxesArr5[k].textContent = "Hello blue";
+}
+
+// ES6
+
+for (const cur of boxesArr6) {
+
+    if(cur.className.includes("blue")) {
+
+        continue;
+
+    }
+
+    cur.textContent = "Hello blue";
+}
+
+///////////////////////////////////////
+
+// ES5
+
+var agesC = [12, 13, 5, 7, 2, 18];
+
+var full = agesC.map(function(cur){
+    return cur >=17;
+});
+
+console.log(full);
+console.log(full.indexOf(true));
+console.log(agesC[full.indexOf(true)]);
+
+// ES6
+
+console.log(agesC.findIndex(cur => cur >=17));
+console.log(agesC.find(cur => cur >= 17));
+
+
+
+
