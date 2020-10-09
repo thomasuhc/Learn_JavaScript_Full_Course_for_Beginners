@@ -359,5 +359,41 @@ console.log(agesC.findIndex(cur => cur >=17));
 console.log(agesC.find(cur => cur >= 17));
 
 
+// The Spread Operator
 
 
+function AddFourAges(a, b, c, d) {
+    return a + b + c + d;
+}
+
+
+var sum1 = AddFourAges(18, 36, 16, 5);
+console.log(sum1);
+
+
+// ES5
+
+var agesL = [12, 4, 5, 8];
+var sum2 = AddFourAges.apply(null, agesL);
+console.log(sum2);
+
+// ES6
+
+const sum3 = AddFourAges(...agesL)
+console.log(sum3);
+
+const familyMiau = ["Auau", "Meow", "Lili", "Mow"];
+
+const familyLu = ["Sam", "Mila", "Lulu", "Mi"];
+
+const bigFamily = [...familyMiau, "Yuli", ...familyLu];
+
+console.log(bigFamily);
+
+
+
+const h = document.querySelector("h1");
+const boxesx = document.querySelectorAll(".box");
+const all = [h, ...boxesx];
+
+Array.from(all). forEach(cur => cur.style.color = "purple");
