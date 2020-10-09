@@ -308,8 +308,8 @@ boxesArr5.forEach(function(cur) {
 boxesArr6.forEach(cur => cur.style.backgroundColor = "dodgerblue"); */
 
 
-const boxesArr6 = Array.from(boxes);
-Array.from(boxes).forEach(cur => cur.style.backgroundColor = "dodgerblue");
+/* const boxesArr6 = Array.from(boxes);
+Array.from(boxes).forEach(cur => cur.style.backgroundColor = "dodgerblue"); */
 
 ///////////////////////////////
 
@@ -328,7 +328,7 @@ for (var k = 0; k < boxesArr5.length; k++) {
 
 // ES6
 
-for (const cur of boxesArr6) {
+/* for (const cur of boxesArr6) {
 
     if(cur.className.includes("blue")) {
 
@@ -337,7 +337,7 @@ for (const cur of boxesArr6) {
     }
 
     cur.textContent = "Hello blue";
-}
+} */
 
 ///////////////////////////////////////
 
@@ -396,4 +396,65 @@ const h = document.querySelector("h1");
 const boxesx = document.querySelectorAll(".box");
 const all = [h, ...boxesx];
 
-Array.from(all). forEach(cur => cur.style.color = "purple");
+Array.from(all). forEach(cur => cur.style.color = "");
+
+
+////////////////////////////////////////////////////
+
+// Rest Parameters
+
+// ES5
+
+function isFullA5() {
+
+    //console.log(arguments);
+
+    var argArr = Array.prototype.slice.call(arguments);
+
+    argArr.forEach(function(cur){
+        //console.log((2020 - cur) >= 18);
+    })
+
+}
+
+isFullA5(2000, 2010, 1990);
+
+// ES6
+
+function isFullA6(...years) {
+
+    //years.forEach(cur => console.log((2020 - cur) >= 18));
+
+}
+
+isFullA6(2000, 2010, 1990, 1999);
+
+////////////////////////////////////////////////////
+
+// ES5
+
+function isFullA5(limit) {
+
+    //console.log(arguments);
+
+    var argArr = Array.prototype.slice.call(arguments);
+
+    //console.log(argArr);
+
+    argArr.forEach(function(cur){
+        //console.log((2020 - cur) >= limit);
+    })
+
+}
+
+isFullA5(21, 1998, 2010, 1990);
+
+// ES6
+
+function isFullA6(limit, ...years) {
+
+   years.forEach(cur => console.log((2020 - cur) >= limit));
+
+}
+
+isFullA6(2000, 2010, 1990, 1999);
