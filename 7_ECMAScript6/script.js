@@ -594,5 +594,91 @@ const mila6 = new Person6("Milaa", 2001, "Dance")
 Person6.greet();
 
 
+// Classes and Subclasses 
+
+// ES5
 
 
+var Person55 = function(namexx, yearOfBirthxx, jobxx) {
+
+    this.namexx = namexx;
+    this.yearOfBirthxx = yearOfBirthxx;
+    this.jobxx = jobxx;
+}
+
+Person55.prototype.calcAgex = function() {
+    
+    var agex = new Date().getFullYear() - this.yearOfBirthxx;
+
+    console.log(agex);
+}
+
+var ath55 = function(namexx, yearOfBirthxx, jobxx, games, sleep) {
+
+    Person55.call(this, namexx, yearOfBirthxx, jobxx);
+
+    this.games = games;
+    this.sleep = sleep;
+
+}
+
+
+
+ath55.prototype = Object.create(Person55.prototype);
+
+ath55.prototype.moreSleep = function() {
+
+    this.sleep++;
+    console.log(this.sleep);
+}
+
+var miffox = new ath55("Mia", 1997, "Cat", "Jump", 10);
+
+miffox.calcAgex();
+miffox.moreSleep();
+
+
+// ES6
+
+class Person66 {
+
+    constructor(name66, yearOfBirth66, job66) {
+
+        this.name66 = name66;
+        this.yearOfBirth66 = yearOfBirth66;
+        this.job66 = job66;
+    }
+
+    calcAge66() {
+
+        var ageN = new Date().getFullYear() - this.yearOfBirth66;
+
+        console.log(ageN);
+    }
+
+    
+    }
+     
+class ath66 extends Person66 {
+    
+    constructor(name66, yearOfBirth66, job66, games66, sleep66) {
+        
+        super(name66, yearOfBirth66, job66);
+
+        this.games66 = games66;
+        this.sleep66 = sleep66;
+    
+    }
+
+    moreSleep66() {
+
+        this.sleep66++;
+        console.log(this.sleep66);
+
+    }
+}
+
+const mila66 = new ath66("Milaa66", 2001, "Dance", "Missing", 5);
+
+mila66.moreSleep66();
+mila66.calcAge66();
