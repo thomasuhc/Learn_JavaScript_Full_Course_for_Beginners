@@ -458,3 +458,44 @@ function isFullA6(limit, ...years) {
 }
 
 isFullA6(2000, 2010, 1990, 1999);
+
+
+// Default Parameters
+
+// ES5
+
+function AuMiauPerson( firstNamee, yearOfBirthh, lastNamee, nationality) {
+
+    lastNamee === undefined ? lastNamee = "Miau" : lastNamee = lastNamee;
+
+    nationality === undefined ? nationality = "Canadian" : nationality = nationality;
+
+    this.firstNamee = firstNamee;
+    this.lastNamee = lastNamee;
+    this.yearOfBirthh = yearOfBirthh;
+    this.nationality = nationality;
+
+}
+
+var miau = new AuMiauPerson("Miau", 2015);
+
+var miafox = new AuMiauPerson("Mia", 2018, "Fox", "American");
+
+
+// ES6
+
+function AuPerson(firstnamex, yearOfBirthx, lastNamex = "liu", nacionalityx = "Brazil") {
+
+    this.firstNamex = firstnamex;
+    this.lastNamex = lastNamex;
+    this.yearOfBirthx = yearOfBirthx;
+    this.nacionalityx = nacionalityx;
+
+    }
+
+
+var miau = new AuPerson("Miau", 2015);
+
+var miafox = new AuPerson("Mia", 2018, "Fox", "American");
+
+
