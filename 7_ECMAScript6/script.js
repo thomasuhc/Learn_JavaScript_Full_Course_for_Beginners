@@ -543,4 +543,56 @@ console.log(question.get(ans === question.get("correct")));
 
 
 
+// Classes
+
+
+// ES5
+
+var Person5 = function(namex, yearOfBirthn, jobx) {
+
+    this.namex = namex;
+    this.yearOfBirthn = yearOfBirthn;
+    this.jobx = jobx;
+}
+
+Person5.prototype.calcAge = function() {
+    
+    var ageN = new Date(getFullYear - this.yearOfBirthn);
+
+    console.log(ageN);
+}
+
+
+var Mifox = new Person5("Mia", 1997, "Cat");
+
+
+// ES6
+
+class Person6 {
+
+    constructor(name6, yearOfBirth6, job6) {
+
+        this.name6 = name6;
+        this.yearOfBirth6 = yearOfBirth6;
+        this.job6 = job6;
+    }
+
+    calcAge6() {
+        var ageN = new Date(getFullYear - this.yearOfBirthn);
+
+        console.log(ageN);
+    }
+
+    static greet() {
+        console.log("Hi there");
+    }
+     
+}
+
+const mila6 = new Person6("Milaa", 2001, "Dance")
+
+Person6.greet();
+
+
+
 
