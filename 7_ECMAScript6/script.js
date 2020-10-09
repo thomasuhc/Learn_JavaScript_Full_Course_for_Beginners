@@ -499,3 +499,48 @@ var miau = new AuPerson("Miau", 2015);
 var miafox = new AuPerson("Mia", 2018, "Fox", "American");
 
 
+
+// Maps
+
+const question = new Map();
+
+question.set('questionn', "name ?");
+
+question.set(1, "Maiu");
+question.set(2, "Angela");
+question.set(3, "Miafox");
+question.set(4, "Meow");
+
+question.set("correct", 3);
+
+question.set(true, "correct");
+question.set(false, "try again");
+
+console.log(question.get("question"));
+console.log(question.size);
+
+
+if(question.has(3)){
+    //question.delete(3);
+
+    console.log("Is 3")
+}
+
+//question.clear();
+
+/* question.forEach((value, key) => console.log(`${key}, ${value}`)); */
+
+for(let [key, value] of question.entries()) {
+   
+    if(typeof(key)=== "number") {
+        console.log(`Is ${key} and ${value}`)
+    }
+}
+
+const ans = parseInt(prompt("Answers: "));
+
+console.log(question.get(ans === question.get("correct")));
+
+
+
+
