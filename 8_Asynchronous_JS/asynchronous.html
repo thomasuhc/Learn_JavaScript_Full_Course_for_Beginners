@@ -109,7 +109,7 @@
             });
         }
 
-        getIDs.then(IDs => {
+/*         getIDs.then(IDs => {
 
             console.log(IDs);
             return getrec3(IDs[2]);
@@ -132,10 +132,21 @@
             console.log("errorrr");
 
         });
+ */
+        async function getRaw() {
 
+            const IDs = await getIDs;
+            console.log(IDs);
 
+            const rec3 = await getrec3(IDs[2]);
+            console.log(rec3);
 
+            const rel = await getrel("miau");
+            console.log(rel);
 
+        }
+
+        getRaw();
 
 
     </script>
