@@ -12,9 +12,9 @@
 
         const second = () => {
            
-            setTimeout(() => {
+            /* setTimeout(() => {
                 console.log("Async Hey");
-            }, 2000);
+            }, 2000); */
         }
         const first = () => {
             
@@ -25,6 +25,43 @@
         }
 
         first();
+
+
+
+        function getRec () {
+
+            setTimeout(() => {
+                
+                const recID = [321, 432, 534, 454];
+                console.log(recID);
+
+                setTimeout((id) => {
+
+                    const rec = {
+                        title: "Cook",
+                        public: "Miau"
+                    }
+                    console.log( `${id}: ${rec.title}`);
+
+                    setTimeout(public => {
+
+                        const rec2 = {
+                        title: "Dance",
+                        public: "Miooo"
+                    }
+                    
+                    console.log(rec2);
+                        
+                    }, 1500, rec.public);
+                    
+                },1500, recID[2]);
+                
+            }, 1500);
+
+        }
+
+        getRec();
+
     </script>
 </body>
 </html>
