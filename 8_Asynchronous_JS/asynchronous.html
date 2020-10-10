@@ -133,7 +133,7 @@
 
         });
  */
-        async function getRaw() {
+       /*  async function getRaw() {
 
             const IDs = await getIDs;
             console.log(IDs);
@@ -146,7 +146,37 @@
 
         }
 
-        getRaw();
+        getRaw(); */
+
+
+        /////////////////////////////////////////////
+
+        function getWeather(woeid) {
+
+            fetch(`https://www.metaweather.com/api/location/${woeid}/`)
+
+        .then(result => {
+            console.log(result);
+            
+            return result.json();
+        })
+
+        .then(data => {
+
+            console.log(data);
+
+            const today = data.consolidated_weather[0];
+            console.log(`${data.title} and ${today.min_temp} and ${today.max_temp}`);
+        })
+
+        .catch(error => console.log(error));
+
+        }
+
+        getWeather(2487956);
+        getWeather(44418);
+
+
 
 
     </script>
