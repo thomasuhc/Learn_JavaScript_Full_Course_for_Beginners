@@ -156,14 +156,14 @@
             fetch(`https://www.metaweather.com/api/location/${woeid}/`)
 
         .then(result => {
-            console.log(result);
+            //console.log(result);
             
             return result.json();
         })
 
         .then(data => {
 
-            console.log(data);
+            //console.log(data);
 
             const today = data.consolidated_weather[0];
             console.log(`${data.title} and ${today.min_temp} and ${today.max_temp}`);
@@ -176,7 +176,32 @@
         getWeather(2487956);
         getWeather(44418);
 
+        /////////////////////////////////////////////////
 
+        // Making AJAX Calls with Fetch and Async/Await
+
+
+        async function getWeatherA(woeid) {
+
+        try {
+
+            const result = await fetch(`https://www.metaweather.com/api/location/${woeid}/`);
+
+            const data = await result.json();
+
+            const tomorrow = data.consolidated_weather[1];
+            console.log(`${data.title} and ${tomorrow.min_temp} and ${tomorrow.max_temp}`);
+
+            return data;
+
+        } catch(error) {
+            console.log(error);
+        }
+
+        }
+
+        getWeatherA(2487956);
+        getWeatherA(44418);
 
 
     </script>
