@@ -1,5 +1,41 @@
-npm init
+
+
+Local Installation
+
+https://webpack.js.org/guides/installation/
+
+https://webpack.js.org/plugins/html-webpack-plugin/
+
+===========================================================
+new package
 
 npm install --save-dev webpack
 
 npm install --save-dev webpack-cli
+
+npm install --save-dev webpack-dev-server
+
+npm install --save-dev html-webpack-plugin
+
+npm install webpack webpack-cli webpack-dev-server html-webpack-plugin --save-dev
+
+=============================================================
+old package
+
+npm install --save-dev webpack@4.2.0
+
+npm install --save-dev webpack-cli@2.0.12
+
+npm install webpack-dev-server@3.1.1 --save-dev
+
+npm install --save-dev html-webpack-plugin
+
+=============================================================
+
+npm install --save-dev webpack@4.32.2
+
+npm install --save-dev webpack-cli@3.3.2
+
+npm install --save-dev webpack-dev-server@3.5.1
+
+npm install --save-dev html-webpack-plugin@3.2.0

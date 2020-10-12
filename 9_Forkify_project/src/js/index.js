@@ -2,5 +2,4 @@
 
 import num from "./test";
 
-console.log(`imported ${num}`);
-
+console.log(`imported ${num} again another package`);
