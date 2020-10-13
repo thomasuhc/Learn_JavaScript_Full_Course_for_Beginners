@@ -38,6 +38,10 @@ npm install --save-dev webpack-cli@3.3.2
 
 npm install --save-dev webpack-dev-server@3.5.1
 
+or 
+
+npm install --save-dev webpack-dev-server@3.11.0
+
 npm install --save-dev html-webpack-plugin@3.2.0
 
 
@@ -49,3 +53,4 @@ npm install --save-dev babel-loader
 
 npm install --save @babel/polyfill
 
+https://stackoverflow.com/questions/61767538/devtools-failed-to-load-sourcemap-for-webpack-node-modules-js-map-http-e

@@ -1,7 +1,9 @@
 // Global app controller
 
-import num from "./test";
+import str from "./models/Search";
 
-const x = 23534435;
+//import {add as x, multiply as y, ID} from "./views/searchView";
 
-console.log(`imported ${num} again another package ${x}`);
+import * as searchView from "./views/searchView";
+
+console.log(`something ${searchView.add(searchView.ID, 3)} and ${searchView.multiply(10,10)} and ${str}`);
