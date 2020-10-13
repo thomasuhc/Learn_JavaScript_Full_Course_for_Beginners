@@ -54,3 +54,5 @@ npm install --save-dev babel-loader
 npm install --save @babel/polyfill
 
 https://stackoverflow.com/questions/61767538/devtools-failed-to-load-sourcemap-for-webpack-node-modules-js-map-http-e
+
+npm install axios --save

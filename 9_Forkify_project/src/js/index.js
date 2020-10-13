@@ -1,9 +1,22 @@
 // Global app controller
+ 
+import axios from "axios";
 
-import str from "./models/Search";
+async function getResults(query) {
 
-//import {add as x, multiply as y, ID} from "./views/searchView";
+    try {
 
-import * as searchView from "./views/searchView";
+        const res = await axios(`https://forkify-api.herokuapp.com/api/search?&q=${query}`);
 
-console.log(`something ${searchView.add(searchView.ID, 3)} and ${searchView.multiply(10,10)} and ${str}`);
+        const recipes = res.data.recipes;
+
+        console.log(recipes);
+
+    } catch (error) {
+
+        alert(error);
+
+    }
+}
+
+getResults("salad");
