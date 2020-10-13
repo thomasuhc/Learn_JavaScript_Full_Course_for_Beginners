@@ -2,4 +2,6 @@
 
 import num from "./test";
 
-console.log(`imported ${num} again another package`);
+const x = 23534435;
+
+console.log(`imported ${num} again another package ${x}`);
